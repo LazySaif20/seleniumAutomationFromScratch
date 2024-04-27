@@ -9,7 +9,7 @@ import pages.CarsGuideHomePageActions;
 public class SearchCarStepDefinitions {
 	
 	CarsGuideHomePageActions carsGuideHomePageActions = new CarsGuideHomePageActions();
-	//Ansari
+
 	@Given("I am on CarsGuide home pages")
 	public void i_am_on_cars_guide_home_pages() {
 	    SeleniumDriver.openPage("https://www.carsguide.com.au/");
@@ -17,7 +17,7 @@ public class SearchCarStepDefinitions {
 
 	@Then("check if the site Logo is present")
 	public void check_if_the_site_logo_is_present() {
-		carsGuideHomePageActions.verifyTheLogoIsPresent();;
+		carsGuideHomePageActions.verifyTheLogoIsPresent();
 	}
 
 	@Then("validate search field is present")
