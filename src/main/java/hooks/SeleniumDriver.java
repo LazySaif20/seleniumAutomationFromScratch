@@ -1,7 +1,6 @@
 package hooks;
 
 import java.time.Duration;
-import java.util.logging.Logger;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -22,8 +21,6 @@ public class SeleniumDriver {
 
     public final static int PAGE_LOAD_TIMEOUT = 30;
 
-    static Logger logger = Logger.getLogger(SeleniumDriver.class.getName());
-
     private SeleniumDriver() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -42,7 +39,7 @@ public class SeleniumDriver {
 
     @Before
     public static void setupDriver() {
-        logger.info("Setting Up Driver");
+        System.out.println("Setting Up Driver");
         if (seleniumDriver == null) {
             seleniumDriver = new SeleniumDriver();
         }
@@ -54,7 +51,6 @@ public class SeleniumDriver {
             driver.quit();
         }
         seleniumDriver = null;
-        logger.info("Browser has been closed");
     }
 
 }
