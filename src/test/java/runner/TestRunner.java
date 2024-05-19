@@ -10,5 +10,5 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@UAT"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
-    // This class doesn't need any code inside, it's just used to set up Cucumber options
+
 }
