@@ -4,34 +4,35 @@ import org.openqa.selenium.support.PageFactory;
 
 import hooks.SeleniumDriver;
 import pagesLocators.CarsGuideHomePageLocators;
+import utilities.CommonActions;
 
 public class CarsGuideHomePageActions {
-	
 	CarsGuideHomePageLocators carsGuideHomePageLocators = null;
+	CommonActions commonActions;
 	
 	public CarsGuideHomePageActions() {
 		this.carsGuideHomePageLocators = new CarsGuideHomePageLocators();
+		this.commonActions = new CommonActions();
 		PageFactory.initElements(SeleniumDriver.getWebDriver(), carsGuideHomePageLocators);
 	}
 	
 	public void verifyTheLogoIsPresent() {
-		carsGuideHomePageLocators.carsGuideHomePageLogo.isDisplayed();
+		commonActions.checkIfElementIsDisplayed(carsGuideHomePageLocators.carsGuideHomePageLogo);
 	}
 	
 	public void verifySeachFieldIsPresent() {
-		carsGuideHomePageLocators.searchFeild.isDisplayed();
+		commonActions.checkIfElementIsDisplayed(carsGuideHomePageLocators.searchFeild);
 	}
 	
 	public void verifySellMyCarButton() {
-		carsGuideHomePageLocators.sellMyCarButton.isDisplayed();
+		commonActions.checkIfElementIsDisplayed(carsGuideHomePageLocators.sellMyCarButton);
 	}
 	
 	public void verifyShortListButtonIsPresent() {
-		carsGuideHomePageLocators.myShortlistButton.isDisplayed();
+		commonActions.checkIfElementIsDisplayed(carsGuideHomePageLocators.myShortlistButton);
 	}
 	
 	public void verifySignUpButtonIsPresent() {
-		carsGuideHomePageLocators.signUpButton.isDisplayed();
+		commonActions.checkIfElementIsDisplayed(carsGuideHomePageLocators.signUpButton);
 	}
-
 }

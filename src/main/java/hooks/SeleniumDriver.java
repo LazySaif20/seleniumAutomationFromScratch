@@ -7,8 +7,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeSuite;
 
 public class SeleniumDriver {
 
@@ -16,7 +14,7 @@ public class SeleniumDriver {
 
     private static WebDriver driver;
 
-    private static WebDriverWait wait;
+    //private static WebDriverWait wait;
 
     public final static int TIME_OUT = 30;
 
@@ -27,7 +25,6 @@ public class SeleniumDriver {
     private SeleniumDriver() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(TIME_OUT));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIME_OUT));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_TIMEOUT));
     }
