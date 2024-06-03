@@ -6,17 +6,19 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.CarsGuideHomePageActions;
 
+import java.io.IOException;
+
 public class SearchCarStepDefinitions {
 	
 	CarsGuideHomePageActions carsGuideHomePageActions = new CarsGuideHomePageActions();
 
 	@Given("I am on CarsGuide home pages")
 	public void i_am_on_cars_guide_home_pages() {
-	    SeleniumDriver.openPage("https://www.carsguide.com.au/");
+	    SeleniumDriver.openPage("https://www.kryogenix.org/code/browser/sorttable/");
 	}
 
 	@Then("check if the site Logo is present")
-	public void check_if_the_site_logo_is_present() {
+	public void check_if_the_site_logo_is_present() throws IOException, InterruptedException {
 		carsGuideHomePageActions.verifyTheLogoIsPresent();
 	}
 
