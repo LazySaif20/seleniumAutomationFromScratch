@@ -29,5 +29,9 @@ public class CarsGuideHomePageLocators {
 	
 	@FindBy(how = How.XPATH, using ="(//a[contains(text(),'advice')])[1]")
 	public WebElement menu_advice;
+
+	@FindBy(how = How.XPATH, using ="//*[@id=\"content\"]/table[2]")
+	public WebElement table;
+
 	
 }
